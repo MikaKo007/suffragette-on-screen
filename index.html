@@ -143,9 +143,18 @@ const HERO_IMAGES = [{"src":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/
     });
   } else {
     HERO_IMAGES.forEach(function(img){
+      var wrap=document.createElement('div');
+      wrap.style.cssText='display:flex;flex-direction:column;align-items:center;gap:0.5rem';
       var i=document.createElement('img');
       i.className='hero-photo'; i.src=img.src; i.alt=img.alt;
-      el.appendChild(i);
+      wrap.appendChild(i);
+      if(img.caption){
+        var c=document.createElement('p');
+        c.style.cssText='font-size:0.7rem;color:var(--parchment-border);font-style:italic;text-align:center;max-width:180px';
+        c.textContent=img.caption;
+        wrap.appendChild(c);
+      }
+      el.appendChild(wrap);
     });
   }
 })();
