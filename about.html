@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>About &amp; Methodology — Suffragette on Screen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#1a1208; --ink-light:#4a3f2f; --ink-faint:#8a7a6a;
+  --parchment:#f5f0e8; --parchment-dark:#ede5d5; --parchment-border:#d4c9b0;
+  --gold:#8b6914; --gold-light:#c49a2a; --red:#7a1f1f;
+  --verified:#1a4a2a; --verified-bg:#e8f2ea;
+  --discrepancy:#5a4000; --discrepancy-bg:#fdf5d8;
+  --unverified:#5a1a1a; --unverified-bg:#fdeaea;
+  --serif:'Playfair Display',Georgia,serif; --body:'Source Serif 4',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--body);background:var(--parchment);color:var(--ink);line-height:1.6;min-height:100vh}
+.hero{background:var(--ink);color:var(--parchment);padding:4rem 2rem 3rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px)}
+.hero-photos{display:flex;justify-content:center;gap:1.5rem;margin-bottom:2.5rem;position:relative;z-index:1}
+.hero-photo{width:180px;height:220px;object-fit:cover;border:3px solid var(--gold);filter:sepia(30%) contrast(1.1);transition:filter .3s;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
+.hero-photo:hover{filter:sepia(0%) contrast(1.05)}
+.hero h1{font-family:var(--serif);font-size:clamp(1.8rem,4vw,3rem);font-weight:700;letter-spacing:.02em;line-height:1.2;margin-bottom:.75rem;position:relative;z-index:1}
+.hero-sub{font-size:1rem;color:var(--parchment-border);font-style:italic;max-width:600px;margin:0 auto .5rem;position:relative;z-index:1}
+.hero-meta{font-size:.8rem;color:var(--ink-faint);letter-spacing:.08em;text-transform:uppercase;position:relative;z-index:1;margin-top:1rem}
+.hero-meta em{text-transform:none;letter-spacing:.04em}
+.hero-rule{width:60px;height:2px;background:var(--gold);margin:1.25rem auto;position:relative;z-index:1}
+.hero-nav{position:relative;z-index:1;margin-top:1.25rem}
+.hero-nav a{color:var(--gold-light);text-decoration:none;font-size:.85rem;letter-spacing:.05em;border:1px solid rgba(196,154,42,.5);padding:.35rem .9rem;border-radius:2px}
+.hero-nav a:hover{background:rgba(196,154,42,.15)}
+.photo-credit{background:rgba(255,255,255,0.04);text-align:center;padding:.4rem;font-size:.72rem;color:var(--ink-faint);font-style:italic;border-bottom:1px solid rgba(255,255,255,0.06);background-color:var(--ink)}
+.controls{background:var(--parchment-dark);border-bottom:2px solid var(--parchment-border);padding:1.25rem 2rem;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.controls-row{max-width:1200px;margin:0 auto;display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
+.search-wrap{flex:1;min-width:200px;position:relative}
+.search-wrap::before{content:'⌕';position:absolute;left:.75rem;top:50%;transform:translateY(-50%);color:var(--ink-faint);font-size:1.1rem;pointer-events:none}
+input[type=text]{width:100%;padding:.55rem .75rem .55rem 2.2rem;font-family:var(--body);font-size:.9rem;border:1.5px solid var(--parchment-border);background:var(--parchment);color:var(--ink);border-radius:3px;outline:none;transition:border-color .2s}
+input[type=text]:focus{border-color:var(--gold)}
+select{padding:.55rem 2rem .55rem .75rem;font-family:var(--body);font-size:.85rem;border:1.5px solid var(--parchment-border);background:var(--parchment);color:var(--ink);border-radius:3px;outline:none;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238a7a6a'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .6rem center;transition:border-color .2s}
+select:focus{border-color:var(--gold)}
+.result-count{font-size:.8rem;color:var(--ink-faint);white-space:nowrap;font-style:italic}
+.table-wrap{max-width:1200px;margin:1.5rem auto;padding:0 1.5rem 3rem}
+table{width:100%;border-collapse:collapse;font-size:.88rem;background:white;box-shadow:0 2px 16px rgba(0,0,0,.06);border:1px solid var(--parchment-border)}
+thead th{background:var(--ink);color:var(--parchment);font-family:var(--serif);font-weight:600;font-size:.82rem;letter-spacing:.04em;padding:.75rem .9rem;text-align:left;white-space:nowrap;cursor:pointer;user-select:none;position:sticky;top:72px}
+thead th:hover{background:#2a2218}
+thead th.sort-asc::after{content:' ↑';color:var(--gold-light)}
+thead th.sort-desc::after{content:' ↓';color:var(--gold-light)}
+tbody tr{border-bottom:1px solid var(--parchment-border);cursor:pointer;transition:background .15s}
+tbody tr:hover{background:var(--parchment)}
+tbody tr.expanded{background:var(--parchment-dark)}
+td{padding:.65rem .9rem;vertical-align:top;color:var(--ink)}
+.td-no{color:var(--ink-faint);font-size:.8rem;width:40px}
+.td-title{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--ink)}
+.td-title .alt{font-size:.78rem;color:var(--ink-faint);font-weight:400;font-style:italic;font-family:var(--body)}
+.td-title .cam{font-size:.9em}
+.td-year{width:60px;text-align:center;font-variant-numeric:tabular-nums}
+.td-country{width:70px;text-align:center}
+.td-genre{width:110px;font-size:.82rem;color:var(--ink-light)}
+.td-company{font-size:.82rem;color:var(--ink-light)}
+.td-status{width:110px}
+.badge{display:inline-block;font-size:.7rem;font-weight:500;padding:.2rem .5rem;border-radius:2px;letter-spacing:.03em;white-space:nowrap}
+.badge-verified{background:var(--verified-bg);color:var(--verified)}
+.badge-discrepancy{background:var(--discrepancy-bg);color:var(--discrepancy)}
+.badge-unverified{background:var(--unverified-bg);color:var(--unverified)}
+.photo-dot{color:var(--gold);font-size:.75rem;margin-left:.35rem}
+.detail-row td{padding:0;background:var(--parchment)}
+.detail-panel{padding:1.5rem 1.5rem 1.5rem 3rem;border-top:2px solid var(--gold);display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.detail-section h3{font-family:var(--serif);font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;padding-bottom:.3rem;border-bottom:1px solid var(--parchment-border)}
+.detail-grid{display:grid;grid-template-columns:auto 1fr;gap:.25rem .75rem;font-size:.85rem}
+.detail-grid .label{color:var(--ink-faint);font-size:.78rem;letter-spacing:.03em;white-space:nowrap;padding-top:.05rem}
+.detail-grid .value{color:var(--ink)}
+.detail-grid .value em{font-style:italic}
+.synopsis-text{font-size:.88rem;color:var(--ink-light);line-height:1.7;font-style:italic}
+.synopsis-none{font-size:.82rem;color:var(--ink-faint);font-style:italic}
+.notes-text{font-size:.78rem;color:var(--ink-light);line-height:1.6;max-height:120px;overflow-y:auto}
+.links-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem}
+.link-btn{display:inline-flex;align-items:center;gap:.3rem;font-size:.75rem;font-family:var(--body);padding:.3rem .7rem;border:1.5px solid var(--parchment-border);border-radius:2px;color:var(--ink-light);text-decoration:none;background:white;transition:all .15s;letter-spacing:.02em}
+.link-btn:hover{border-color:var(--gold);color:var(--gold);background:var(--parchment)}
+.footage-tag{display:inline-block;font-size:.75rem;background:var(--parchment-dark);color:var(--ink-light);padding:.15rem .4rem;border-radius:2px;border:1px solid var(--parchment-border);margin-left:.3rem}
+.detail-photo{max-width:100%;border:2px solid var(--parchment-border);box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.detail-photo-caption{font-size:.72rem;color:var(--ink-faint);font-style:italic;margin-top:.3rem}
+footer{background:var(--ink);color:var(--parchment-border);text-align:center;padding:2rem;font-size:.8rem;line-height:1.8}
+footer a{color:var(--gold-light);text-decoration:none}
+footer a:hover{text-decoration:underline}
+.footer-note{margin-top:.75rem;font-size:.72rem;color:var(--ink-faint);font-style:italic}
+.empty-state{text-align:center;padding:4rem 2rem;color:var(--ink-faint);font-style:italic}
+@media(max-width:768px){.hero-photos{gap:.75rem}.hero-photo{width:110px;height:140px}.controls-row{flex-direction:column}.detail-panel{grid-template-columns:1fr}.td-company,.td-genre{display:none}}
+
+.about-wrap{max-width:760px;margin:2.5rem auto 4rem;padding:0 1.5rem}
+.about-wrap h2{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:var(--ink);margin:2.2rem 0 .8rem;padding-bottom:.35rem;border-bottom:2px solid var(--gold)}
+.about-wrap p{margin-bottom:.9rem;font-size:.95rem;color:var(--ink-light)}
+.about-wrap ul{margin:0 0 .9rem 1.4rem;font-size:.95rem;color:var(--ink-light)}
+.about-wrap li{margin-bottom:.35rem}
+.about-wrap strong{color:var(--ink)}
+.cite-box{background:white;border:1px solid var(--parchment-border);border-left:3px solid var(--gold);padding:1rem 1.2rem;font-size:.9rem;color:var(--ink);margin-bottom:.9rem}
+.about-wrap a{color:var(--gold);text-decoration:none}
+.about-wrap a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header class="hero" style="padding:3rem 2rem 2.5rem">
+  <div class="hero-rule"></div>
+  <h1>About &amp; Methodology</h1>
+  <p class="hero-sub"><em>Suffragette on Screen</em> — Britain, 1906–1917</p>
+  <div class="hero-rule"></div>
+  <nav class="hero-nav"><a href="index.html">← Back to the database</a></nav>
+</header>
+
+<div class="about-wrap">
+
+<h2>About This Database</h2>
+<p><em>Suffragette on Screen</em> is a research database cataloguing 138 fiction films on suffragette and women's suffrage themes released in Britain between 1906 and 1917. It is compiled from systematic archival research in the two principal British film trade papers of the period — the <em>Kinematograph Weekly</em> (KW) and <em>The Bioscope</em> (BS) — and aims to provide a reliable, source-documented record of how the suffrage movement was represented on the early British screen.</p>
+<p>Many of these films are lost; for a large number of them, the trade-paper notices, synopses and advertisements gathered here are the fullest surviving record of their content.</p>
+
+<h2>Sources and Methodology</h2>
+<p><strong>Primary sources.</strong> The database is built on a systematic search of the <em>Kinematograph Weekly</em> (1900–1918) and <em>The Bioscope</em> (1908–1918), accessed through the British Newspaper Archive (BNA), using the search terms 'suffrage' and 'suffragette'. Entries identified in scholarly literature were added and traced back to the trade papers wherever possible.</p>
+<p><strong>Synopses.</strong> Plot synopses are drawn exclusively from the primary sources. Where no contemporary description has been located, the field is left blank rather than reconstructed from secondary sources.</p>
+<p><strong>Titles.</strong> Films are listed under the titles used in KW/BS at the time of release. Variant titles — including those used by modern databases — are recorded in the Alternative Titles field.</p>
+<p><strong>Film lengths.</strong> Footage figures are taken from KW/BS notices. Where the two papers disagree, the KW figure is adopted and the discrepancy is recorded in the Notes.</p>
+<p><strong>Verification status.</strong> Every entry carries one of three labels:</p>
+<ul>
+<li><strong>Verified</strong> — corroborated in KW and/or BS;</li>
+<li><strong>Discrepancy found</strong> — the sources disagree on a point of fact; the primary source given priority is stated in the Notes;</li>
+<li><strong>Unverified</strong> — no KW/BS corroboration has yet been located.</li>
+</ul>
+<p><strong>Supplementary sources.</strong> IMDb, the BFI and AFI catalogues, and scholarly publications are used for cross-reference and supplementary information (such as US release data and production credits). Wherever such material is used, the source is identified in the Notes.</p>
+
+<h2>A Note on Links</h2>
+<p>Links to <em>Kinematograph Weekly</em> and <em>The Bioscope</em> pages point to the <a href="https://www.britishnewspaperarchive.co.uk" target="_blank" rel="noopener">British Newspaper Archive</a>; a subscription may be required to view full pages. <em>The Bioscope</em> and other trade papers of the period can also be consulted free of charge through the <a href="https://lantern.mediahist.org" target="_blank" rel="noopener">Media History Digital Library</a>.</p>
+
+<h2>Version</h2>
+<p>Version 16, last revised 12 July 2026. The database is a work in progress and is revised as further primary evidence is located. Substantive changes between versions are documented in the revision notes.</p>
+
+<h2>How to Cite This Database</h2>
+<p>Suggested citation:</p>
+<div class="cite-box">Ko, Mika. <em>Suffragette on Screen: A Database of Suffragette-Themed Fiction Films Released in Britain, 1906–1917</em>. Version 16, Hosei University, 2026. https://mikako007.github.io/suffragette-on-screen/. Accessed [date].</div>
+
+<h2>License</h2>
+<p>The database text and data are made available under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>. Images and newspaper page reproductions remain the property of their respective rights holders and are not covered by this license.</p>
+
+<h2>Acknowledgements</h2>
+<p>This work was supported by JSPS KAKENHI Grant Number 25K03664.</p>
+<p>The compilation of this database was made possible by the British Newspaper Archive (a partnership between the British Library and Findmypast) and the Media History Digital Library.</p>
+
+<h2>Contact and Corrections</h2>
+<p>Corrections, additions and further evidence — particularly contemporary sources for entries still marked Unverified — are warmly welcomed.</p>
+<p>Mika Ko, Ph.D.<br>
+Associate Professor, Hosei University, Tokyo, Japan<br>
+<a href="mailto:M.Ko@hosei.ac.jp">M.Ko@hosei.ac.jp</a></p>
+
+</div>
+
+<footer>
+  <p><strong>Suffragette on Screen: Britain 1906–1917</strong> — Version 16, last revised 12 July 2026</p>
+  <p><a href="index.html">← Back to the database</a></p>
+  <p class="footer-note">Database text and data: CC BY 4.0 · This work was supported by JSPS KAKENHI Grant Number 25K03664.</p>
+</footer>
+
+</body>
+</html>
