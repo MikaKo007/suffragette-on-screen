@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this database, please cite it as below."
+type: dataset
+title: "Suffragette on Screen: A Database of Suffragette-Themed Fiction Films Released in Britain, 1906–1917"
+authors:
+  - family-names: "Ko"
+    given-names: "Mika"
+    affiliation: "Hosei University"
+version: "16"
+date-released: 2026-07-12
+url: "https://mikako007.github.io/suffragette-on-screen/"
+repository-code: "https://github.com/MikaKo007/suffragette-on-screen"
+license: CC-BY-4.0
+keywords:
+  - suffragette
+  - women's suffrage
+  - silent film
+  - early cinema
+  - British cinema
+  - film history
+  - Kinematograph Weekly
+  - The Bioscope
+abstract: >-
+  A research database cataloguing 138 fiction films on suffragette and
+  women's suffrage themes released in Britain between 1906 and 1917,
+  compiled from systematic archival research in the Kinematograph Weekly
+  and The Bioscope, the two principal British film trade papers of the
+  period. Entries record contemporary titles, production companies,
+  countries, genres, footage, release references, primary-source synopses
+  and verification status. This work was supported by JSPS KAKENHI Grant
+  Number 25K03664.
