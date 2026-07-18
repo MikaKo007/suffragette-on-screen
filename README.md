@@ -1,5 +1,7 @@
 # Suffragette on Screen: Britain 1906–1917
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21321667.svg)](https://doi.org/10.5281/zenodo.21321667)
+
 **A research database of suffragette-themed fiction films released in Britain, 1906–1917**
 
 🔗 **Browse the database:** https://mikako007.github.io/suffragette-on-screen/
@@ -16,9 +18,8 @@ Full details of sources and methodology: [About & Methodology](https://mikako007
 
 ## How to cite
 
-> Ko, Mika. *Suffragette on Screen: A Database of Suffragette-Themed Fiction Films Released in Britain, 1906–1917*. Version 16, Hosei University, 2026. https://mikako007.github.io/suffragette-on-screen/. Accessed [date].
+> Ko, Mika. *Suffragette on Screen: A Database of Suffragette-Themed Fiction Films Released in Britain, 1906–1917*. Version 16, Hosei University, 2026. https://mikako007.github.io/suffragette-on-screen/. doi:[10.5281/zenodo.21321667](https://doi.org/10.5281/zenodo.21321667). Accessed [date].
 
-<!-- After the Zenodo DOI is issued, add: doi:10.5281/zenodo.XXXXXXX -->
 
 ## License
 
