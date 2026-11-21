@@ -6,9 +6,9 @@ authors:
   - family-names: "Ko"
     given-names: "Mika"
     affiliation: "Hosei University"
-version: "17"
+version: "18"
 doi: 10.5281/zenodo.21321666
-date-released: 2026-10-01
+date-released: 2026-11-21
 url: "https://mikako007.github.io/suffragette-on-screen/"
 repository-code: "https://github.com/MikaKo007/suffragette-on-screen"
 license: CC-BY-4.0
@@ -22,7 +22,7 @@ keywords:
   - Kinematograph Weekly
   - The Bioscope
 abstract: >-
-  A research database cataloguing 138 fiction films on suffragette and
+  A research database cataloguing 139 fiction films on suffragette and
   women's suffrage themes released in Britain between 1906 and 1918,
   compiled from systematic archival research in the Kinematograph Weekly
   and The Bioscope, the two principal British film trade papers of the

@@ -6,7 +6,7 @@
 
 🔗 **Browse the database:** https://mikako007.github.io/suffragette-on-screen/
 
-*Suffragettes on British Screens* catalogues **138 fiction films** on suffragette and women's suffrage themes released in Britain between 1906 and 1918. It is compiled from systematic archival research in the two principal British film trade papers of the period — the *Kinematograph Weekly* (KW) and *The Bioscope* (BS) — accessed through the British Newspaper Archive.
+*Suffragettes on British Screens* catalogues **139 fiction films** on suffragette and women's suffrage themes released in Britain between 1906 and 1918. It is compiled from systematic archival research in the two principal British film trade papers of the period — the *Kinematograph Weekly* (KW) and *The Bioscope* (BS) — accessed through the British Newspaper Archive.
 
 Many of these films are lost; for a large number of them, the trade-paper notices, synopses and advertisements gathered here are the fullest surviving record of their content.
 
@@ -18,7 +18,7 @@ Full details of sources and methodology: [About & Methodology](https://mikako007
 
 ## How to cite
 
-> Ko, Mika. *Suffragettes on British Screens: A Database of Suffragette-Themed Fiction Films, 1906–1918*. Version 17, Hosei University, 2026. https://mikako007.github.io/suffragette-on-screen/. doi:[10.5281/zenodo.21321666](https://doi.org/10.5281/zenodo.21321666). Accessed [date].
+> Ko, Mika. *Suffragettes on British Screens: A Database of Suffragette-Themed Fiction Films, 1906–1918*. Version 18, Hosei University, 2026. https://mikako007.github.io/suffragette-on-screen/. doi:[10.5281/zenodo.21321666](https://doi.org/10.5281/zenodo.21321666). Accessed [date].
 
 
 ## License
