@@ -6,9 +6,9 @@ authors:
   - family-names: "Ko"
     given-names: "Mika"
     affiliation: "Hosei University"
-version: "18"
+version: "19"
 doi: 10.5281/zenodo.21321666
-date-released: 2026-11-21
+date-released: 2026-11-28
 url: "https://mikako007.github.io/suffragette-on-screen/"
 repository-code: "https://github.com/MikaKo007/suffragette-on-screen"
 license: CC-BY-4.0
